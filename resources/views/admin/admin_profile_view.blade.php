@@ -62,15 +62,16 @@
 							</div>
 							<div class="col-lg-8">
 								<div class="card">
-
                                 <form action="{{route('admin.profile.store')}}" method="post" enctype="multipart/form-data">
-									<div class="card-body">
+									@csrf
+
+								<div class="card-body">
 										<div class="row mb-3">
 											<div class="col-sm-3">
 												<h6 class="mb-0">Full Name</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" name="name"class="form-control" value="{{$profileData->name}}" />
+												<input type="text" name="name" class="form-control" value="{{$profileData->name}}" />
 											</div>
 										</div>
 										<div class="row mb-3">
@@ -78,7 +79,7 @@
 												<h6 class="mb-0">Email</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="email" name="email"class="form-control" value="{{$profileData->email}}" />
+												<input type="email" name="email" class="form-control" value="{{$profileData->email}}" />
 											</div>
 										</div>
 										<div class="row mb-3">
@@ -103,19 +104,19 @@
 											</div>
 											<div class="col-sm-9 text-secondary">
 									<input class="form-control" name=photo type="file" id="image" id="formFile">
-								</div>
-							</div>
+                                    </div>
+							        </div>
 
 
-                            <div class="row mb-3">
+                                    <div class="row mb-3">
 											<div class="col-sm-3">
 												<h6 class="mb-0"></h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
                                             <img id="showImage"  src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) :url('upload/no_image.jpg')}}" alt="Admin" class="rounded-circle p-1 bg-primary" width="80">
 
-								</div>
-							</div>
+								    </div>
+							        </div>
 
 										</div>
 										<div class="row">
@@ -124,8 +125,9 @@
 												<input type="submit" class="btn btn-primary px-4" value="Save Changes" />
 											</div>
 										</div>
-									</div>
+							        </div>
 								</div>
+														</form>
 							</div>
 						</div>
 					</div>
