@@ -24,7 +24,7 @@
                                 </p>
                                 <ul>
                                     <li>
-                                        <img src="assets/img/testimonials/testimonials-img1.jpg')}}" alt="Images">
+                                        <img src="{{asset('frontend/assets/img/testimonials/testimonials-img1.jpg')}}" alt="Images">
                                         <h3>Mary Marden</h3>
                                         <span>New York City</span>
                                     </li>
