@@ -28,6 +28,16 @@
                                     <i class='bx bx-envelope'></i>
                                     <a href="mailto:hello@hoolka.com">hello@hoolka.com</a>
                                 </li>
+
+                                <li>
+                                    <i class='bx bxs-user-pin'></i>
+                                    <a href="{{route('login')}}">Login</a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bxs-user-rectangle'></i>
+                                    <a href="{{route('register')}}">Register</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
