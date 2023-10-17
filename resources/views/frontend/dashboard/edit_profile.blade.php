@@ -37,6 +37,7 @@
             <section class="checkout-area pb-70">
             <div class="container">
             <form action="{{route('profile.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="billing-details">
@@ -47,21 +48,21 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
                                             <label> Name <span class="required">*</span></label>
-                                            <input type="text" name="name" class="form-control" value"{{$profileData->name}}">
+                                            <input type="text" name="name" class="form-control" value="{{$profileData->name}}" >
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
                                             <label>Email <span class="required">*</span></label>
-                                            <input type="text" name="email" class="form-control" value"{{$profileData->email}}">
+                                            <input type="text" name="email" class="form-control" value="{{$profileData->email}}">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" name="address" class="form-control" value"{{$profileData->address}}">
+                                            <input type="text" name="address" class="form-control" value="{{$profileData->address}}" >
                                         </div>
                                     </div>
 
@@ -70,7 +71,7 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group">
                                             <label>Phone <span class="required">*</span></label>
-                                            <input type="email" name="phone" class="form-control" value"{{$profileData->phone}}">
+                                            <input type="text" name="phone" class="form-control" value="{{$profileData->phone}}" >
                                         </div>
                                     </div>
 <div class="col-lg-12 col-md-6">
@@ -106,17 +107,17 @@
             </div>
         </div>
         <!-- Service Details Area End -->
-        <script type="text/javascript">
+<script type="text/javascript">
                 
-                $(document).ready(function(){
+    $(document).ready(function(){
     $('#image').change(function(e){
         var reader = new FileReader();
         reader.onload = function (e){
-            $('#showImage').attr('src', e.target.result);
+    $('#showImage').attr('src', e.target.result);
         };
-        reader.readAsDataURL(e.target.files[0]);
+    reader.readAsDataURL(e.target.files[0]);
     });
 });
-                    </script>
+ </script>
 
  @endsection

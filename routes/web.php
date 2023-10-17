@@ -9,7 +9,7 @@ use App\Http\Controllers\UserController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-route::get('/',[UserController::class,'Index']);
+Route::get('/',[UserController::class,'Index']);
 
 Route::get('/dashboard', function () {
     return view('frontend.dashboard.user_dashboard');
@@ -18,7 +18,10 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [UserController::class, 'UserProfile'])->name('user.profile');
-    Route::post('/profile/store', [UserController::class, 'ProfileStore'])->name('profile.store');
+    Route::post('/profile/store', [UserController::class, 'UserStore'])->name('profile.store');
+    Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+    Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password');
+    Route::post('/password/change/password', [UserController::class, 'ChangePasswordStore'])->name('password.change.store');
 });
 
 require __DIR__.'/auth.php';

@@ -95,7 +95,7 @@
 												<h6 class="mb-0">Address</h6>
 											</div>
 											<div class="col-sm-9 text-secondary">
-												<input type="text" name="Address" class="form-control" value="{{$profileData->Address}}" />
+												<input type="text" name="address" class="form-control" value="{{$profileData->address}}" />
 											</div>
 										</div>
                                         <div class="row mb-3">

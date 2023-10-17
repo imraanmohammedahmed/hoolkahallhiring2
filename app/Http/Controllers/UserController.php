@@ -28,19 +28,19 @@ class UserController extends Controller
         $data->email =$request->email;
         $data->phone =$request->phone;
         $data->address =$request->address;
+
         if ($request->file('photo')) {
             $file=$request->file('photo');
             @unlink(public_path('upload/user_images/'.$data->photo));
             $filename=date('YmdHi').$file->getClientOriginalName();
-            $file->move(public_path('upload/user
-            _images'),$filename);
+            $file->move(public_path('upload/user_images'),$filename);
             $data['photo']=$filename;
 
     }
     $data->save();
 
     $notification = array(
-        'message' => 'Admin Profile Updated Successfully!',
+        'message' => 'User Profile Updated Successfully!',
         'alert-type'=>'success' 
 
     );
@@ -48,4 +48,53 @@ class UserController extends Controller
     return redirect()->back()->with($notification);
 
     }
+
+    public function UserLogout(Request $request)
+    {
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        
+         $notification = array(
+        'message' => 'User Logout Updated Successfully!',
+        'alert-type'=>'success' 
+    );
+        return redirect('/login')->with ($notification);
+    }
+
+
+    public function UserChangePassword()
+    {
+        return view('frontend.dashboard.user_change_password');
+    }
+
+    public function ChangePasswordStore (Request $request)
+    {
+        $request->validate([
+            'old_password'=>'required',
+            'new_password'=> 'required|confirmed',
+        ]);
+        if(!Hash::check($request->old_password, auth::user()->password)){
+            $notification = array(
+                'message' => 'Old Password Does not Match!',
+                'alert-type'=>'error' 
+            );
+           return back()->with($notification);
+        }
+        User::whereId(auth::user()->id)->update(
+            [
+                'password'=> Hash::make($request->new_password)
+
+            ]);
+            $notification = array(
+                'message' => 'Password Changed Succesfully!',
+                'alert-type'=>'success' 
+            );
+            return back()->with($notification);
+
+    }
+
 }
