@@ -4,7 +4,7 @@
  <div class="banner-area" style="height: 480px;">
             <div class="container">
                 <div class="banner-content">
-                    <h1>Discover a Hotel & Resort to Book a Suitable Room</h1>
+                    <h1>Discover a Hall now</h1>
                     
                      
                 </div>
@@ -46,13 +46,17 @@
                                         <option>02</option>
                                         <option>03</option>
                                         <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
                                     </select>	
                                 </div>
                             </div>
 
                             <div class="col-lg-4 col-md-4">
                                 <button type="submit" class="default-btn btn-bg-one border-radius-5">
-                                    Check Arability
+                                    Check Availability
                                 </button>
                             </div>
                         </div>

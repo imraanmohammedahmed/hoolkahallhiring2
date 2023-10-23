@@ -18,7 +18,7 @@
                             <ul>
                                 <li>
                                     <i class='bx bx-home-alt'></i>
-                                    <a href="#">100 Sore Road, Nairobi Kenya</a>
+                                    <a href="#">Sore Road, Nairobi Kenya</a>
                                 </li>
                                 <li>
                                     <i class='bx bx-phone-call'></i>
@@ -28,6 +28,18 @@
                                     <i class='bx bx-envelope'></i>
                                     <a href="mailto:hello@hoolka.com">hello@hoolka.com</a>
                                 </li>
+@auth 
+                               <li>
+                                    <i class='bx bxs-user-pin'></i>
+                                    <a href="{{route('dashboard')}}">Dashboard</a>
+                                </li>
+
+                                <li>
+                                    <i class='bx bxs-user-rectangle'></i>
+                                    <a href="{{route('user.logout')}}">Logout</a>
+                                </li>
+
+@else
 
                                 <li>
                                     <i class='bx bxs-user-pin'></i>
@@ -38,6 +50,7 @@
                                     <i class='bx bxs-user-rectangle'></i>
                                     <a href="{{route('register')}}">Register</a>
                                 </li>
+@endauth
                             </ul>
                         </div>
                     </div>

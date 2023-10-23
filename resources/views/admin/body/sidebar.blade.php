@@ -13,7 +13,7 @@
 			<!--navigation-->
 			<ul class="metismenu" id="menu">
 			<li>
-					<a href="widgets.html">
+					<a href="http://127.0.0.1:8000/admin/dashboard">
 					<div class="parent-icon"><i class='bx bx-home-alt'></i>
 						</div>
 						<div class="menu-title">Dashboard</div>
@@ -23,16 +23,42 @@
 					<a href="javascript:;" class="has-arrow">
 						<div class="parent-icon"><i class="bx bx-category"></i>
 						</div>
-						<div class="menu-title">Application</div>
+						<div class="menu-title">Manage Team</div>
 					</a>
 					<ul>
-						<li> <a href="app-emailbox.html"><i class='bx bx-radio-circle'></i>Email</a>
+						<li> <a href="{{ route('all.team') }}"><i class='bx bx-radio-circle'></i>All Team</a>
 						</li>
-						<li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>Chat Box</a>
+						<li> <a href="{{ route('add.team') }}"><i class='bx bx-radio-circle'></i>Add Team</a>
 						</li>
 						
 					</ul>
 				</li>
+
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="bx bx-category"></i>
+						</div>
+						<div class="menu-title">Book Area</div>
+					</a>
+					<ul>
+						<li> <a href="{{ route('book.area') }}"><i class='bx bx-radio-circle'></i>Manage Book Area</a>
+						</li>
+						
+					</ul>
+				</li>
+
+				<li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bx bx-category"></i>
+                </div>
+                <div class="menu-title">Manage Hall Type </div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('hall.type.list') }}"><i class='bx bx-radio-circle'></i>Hall Type List </a>
+                </li> 
+                 
+            </ul>
+        </li>
 				<li class="menu-label">UI Elements</li>
 				<li>
 					<a href="widgets.html">

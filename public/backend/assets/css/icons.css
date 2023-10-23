@@ -7553,6 +7553,9 @@ File: icons.css
 	content: "\eb16"
 }
 
+.lni.lni-close::before {
+    content: "\eb17";
+
 .lni-lock-alt::before {
 	content: "\eb17"
 }
