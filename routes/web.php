@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\HallTypeController;
 use App\Http\Controllers\Backend\HallController;
+use App\Http\Controllers\Frontend\FrontendHallController;
 
 
 //Route::get('/', function () {
@@ -95,3 +96,10 @@ Route::middleware(['auth','roles:admin'])->group(function(){
 });
 
     });//End Admin Group Middleware
+
+    Route::controller(FrontendHallController::class)->group(function(){
+
+        Route::get('/halls/', 'AllFrontendHalllist')->name('fhall.all');
+        Route::get('/hall/details/{id}', 'HallDetailsPage');
+
+    });

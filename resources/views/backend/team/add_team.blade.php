@@ -39,10 +39,10 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-3">
-                        <h6 class="mb-0">Postion</h6>
+                        <h6 class="mb-0">Position</h6>
                     </div>
                     <div class="form-group col-sm-9 text-secondary">
-                        <input type="text" name="postion"  class="form-control"  />
+                        <input type="text" name="position"  class="form-control"  />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -104,7 +104,7 @@
                             name: {
                                 required : true,
                             }, 
-                            postion: {
+                            position: {
                                 required : true,
                             }, 
                             facebook: {
@@ -119,8 +119,8 @@
                             name: {
                                 required : 'Please Enter Team Name',
                             }, 
-                            postion: {
-                                required : 'Please Enter Team Postion',
+                            position: {
+                                required : 'Please Enter Team Position',
                             }, 
                             facebook: {
                                 required : 'Please Enter Facebook Url',

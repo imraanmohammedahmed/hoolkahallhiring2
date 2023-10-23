@@ -20,8 +20,8 @@
                                 <div class="form-group">
                                     <label>CHECK IN TIME</label>
                                     <div class="input-group">
-                                        <input id="datetimepicker" type="text" class="form-control" placeholder="11/02/2020">
-                                        <span class="input-group-addon"></span>
+                                    <input autocomplete="off"  type="text" required name="check_in" class="form-control dt_picker" placeholder="yyy-mm-dd">
+                                <span class="input-group-addon"></span>
                                     </div>
                                     <i class='bx bxs-chevron-down'></i>	
                                 </div>
@@ -31,8 +31,8 @@
                                 <div class="form-group">
                                     <label>CHECK OUT TIME</label>
                                     <div class="input-group">
-                                        <input id="datetimepicker-check" type="text" class="form-control" placeholder="11/02/2020">
-                                        <span class="input-group-addon"></span>
+                                    <input autocomplete="off"  type="text" required name="check_out" class="form-control dt_picker" placeholder="yyy-mm-dd">
+                                <span class="input-group-addon"></span>
                                     </div>
                                     <i class='bx bxs-chevron-down'></i>	
                                 </div>
@@ -42,14 +42,16 @@
                                 <div class="form-group">
                                     <label>GUESTS</label>
                                     <select class="form-control">
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
-                                        <option>04</option>
-                                        <option>05</option>
-                                        <option>06</option>
-                                        <option>07</option>
-                                        <option>08</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                        <option>50</option>
+                                        <option>60</option>
+                                        <option>70</option>
+                                        <option>80</option>
+                                        <option>90</option>
+                                        <option>100</option>
                                     </select>	
                                 </div>
                             </div>

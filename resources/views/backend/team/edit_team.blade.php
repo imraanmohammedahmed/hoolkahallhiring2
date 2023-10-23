@@ -41,10 +41,10 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-sm-3">
-                        <h6 class="mb-0">Postion</h6>
+                        <h6 class="mb-0">Position</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="postion"  class="form-control"  value="{{ $team->postion }}"  />
+                        <input type="text" name="position"  class="form-control"  value="{{ $team->position }}"  />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -158,7 +158,7 @@
                         <h6 class="mb-0">Position</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <input type="text" name="postion"  class="form-control"  value="{{ $team->postion }}"  />
+                        <input type="text" name="position"  class="form-control"  value="{{ $team->position }}"  />
                     </div>
                 </div>
                 <div class="row mb-3">

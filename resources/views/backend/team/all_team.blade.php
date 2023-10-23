@@ -35,7 +35,7 @@
                             <th>Sl</th>
                             <th>Image</th>
                             <th>Name</th>
-                            <th>Postion</th>
+                            <th>Position</th>
                             <th>Facebook</th>
                             <th>Action</th>
                         </tr>
@@ -46,10 +46,12 @@
                             <td>{{ $key+1 }}</td>
                             <td> <img src="{{ asset($item->image) }}" alt="" style="width:70px; height:40px;" > </td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->postion }}</td>
+                            <td>{{ $item->position }}</td>
                             <td>{{ $item->facebook }}</td>
                             <td>
-     @if(Auth::user()->can('team.edit'))
+    
+    @if(Auth::user()->can('team.edit'))
+    
     <a href="{{ route('edit.team',$item->id) }}" class="btn btn-warning px-3 radius-30"> Edit</a>
     @endif
     
